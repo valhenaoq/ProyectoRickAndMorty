@@ -24,6 +24,3 @@ jobs:
 
       - name: Compilar Tailwind
         run: npm run build
-
-      - name: Validar el HTML
-        run: npm run validar

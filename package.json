@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tailwindcss -i ./src/entrada.css -o ./css/tailwind.css --watch",
+    "build:css": "tailwindcss -i ./src/entrada.css -o ./css/tailwind.css",
+    "validar": "html-validate \"*.html\""
   },
   "keywords": [],
   "author": "",
@@ -13,5 +15,9 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.3.3",
     "tailwindcss": "^4.3.3"
+  },
+
+  "devDependencies": {
+    "html-validate": "^11.17.0"
   }
 }
