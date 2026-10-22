@@ -29,7 +29,7 @@ const ESTADOS = {
 const tarjetaHTML = (p) => `
   <article class="flex flex-col overflow-hidden rounded-2xl bg-white shadow group transition hover:-translate-y-1 hover:shadow-xl dark:bg-slate-800">
     <div class="overflow-hidden">
-      <img src="${p.image}" alt="${p.name}"
+      <img src="${p.image}" alt="${p.name}" loading="lazy"
            class="aspect-square w-full object-cover transition group-hover:scale-105">
     </div>
     <div class="flex flex-1 flex-col gap-2 p-4">
