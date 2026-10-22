@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tailwindcss -i ./src/entrada.css -o ./css/tailwind.css --watch",
-    "build:css": "tailwindcss -i ./src/entrada.css -o ./css/tailwind.css",
+    "build": "tailwindcss -i ./src/entrada.css -o ./css/tailwind.css",
     "validar": "html-validate \"*.html\""
   },
   "keywords": [],
