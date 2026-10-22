@@ -1,0 +1,29 @@
+# .github/workflows/ci.yml · La ruta y la extensión son obligatorias
+name: CI
+
+# Cuándo corre: en cada push a main y en cada Pull Request
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest          # una máquina Linux limpia, prestada por GitHub
+    steps:
+      - name: Descargar el código del repo
+        uses: actions/checkout@v7
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Instalar dependencias exactas del package-lock.json
+        run: npm ci
+
+      - name: Compilar Tailwind
+        run: npm run build
+
+      - name: Validar el HTML
+        run: npm run validar
